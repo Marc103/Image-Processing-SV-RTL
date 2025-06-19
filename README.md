@@ -13,8 +13,10 @@ input (gen_x), golden model output (mdl_x) and the the dut output (which are the
 (.vcd file) is also produced in the simulate folder. This structure is also the same with the bilinear_xform_engine_tb.
 
 Before
+![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/conv_gen_image_0.png)
 
 After - 4x4 box filter
+![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/conv_dut_image_0.png)
 
 ### Saving Resources
 Since multipliers are expensive, the module also has a CLKS_PER_PIXEL parameter, which allows it to take more than
@@ -36,8 +38,11 @@ buffer the entire image. But for small rotations, scaling and translations, we c
 of the image. This is controlled by the N_LINES_POW_2 parameters (i.e setting this to 6 will give us 2**6 lines).
 
 Before
+![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/bxform_gen_image_0.png)
 
 After - 5 degree rotation with 0.9 scaling with 32 lines buffered.
+![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/bxform_dut_image_0.png)
+
 
 ### Fixed Pointer Arithmetic
 - Using fixed pointer arithmetic, you can set at what order of magnitude you want to do your calculations
