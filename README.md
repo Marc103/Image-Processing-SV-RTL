@@ -37,10 +37,10 @@ the less we can perform bigger transformations. For instance, if you wanted to f
 buffer the entire image. But for small rotations, scaling and translations, we can use, say, a quater of the number of lines
 of the image. This is controlled by the N_LINES_POW_2 parameters (i.e setting this to 6 will give us 2**6 lines).
 
-Before
+Before  
 ![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/bxform_gen_image_0.png)
 
-After - 5 degree rotation with 0.9 scaling with 32 lines buffered.
+After - 5 degree rotation with 0.9 scaling with 32 lines buffered.  
 ![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/bxform_dut_image_0.png)
 
 
