@@ -12,10 +12,10 @@ I perform a simple box filter to demonstrate it working. The files will be place
 input (gen_x), golden model output (mdl_x) and the the dut output (which are then compared to check for correctness). The waveform
 (.vcd file) is also produced in the simulate folder. This structure is also the same with the bilinear_xform_engine_tb.
 
-Before
+Before  
 ![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/conv_gen_image_0.png)
 
-After - 4x4 box filter
+After - 4x4 box filter  
 ![alt text](https://github.com/Marc103/Image-Processing-SV-RTL/blob/main/conv_dut_image_0.png)
 
 ### Saving Resources
