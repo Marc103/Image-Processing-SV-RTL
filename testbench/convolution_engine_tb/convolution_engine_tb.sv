@@ -47,19 +47,19 @@ module convolution_engine_tb;
 
     localparam IMAGE_WIDTH = 100;
     localparam IMAGE_HEIGHT = 100;
-    localparam KERNEL_WIDTH = 1;
-    localparam KERNEL_HEIGHT = 5;
+    localparam KERNEL_WIDTH = 4;
+    localparam KERNEL_HEIGHT = 4;
 
     // Fixed Point Arithmetic params
     localparam FP_M_IMAGE = 8;
     localparam FP_N_IMAGE = 0;
     localparam FP_S_IMAGE = 0;
 
-    localparam FP_M_KERNEL = 2;
-    localparam FP_N_KERNEL = 0;
-    localparam FP_S_KERNEL = 1;
+    localparam FP_M_KERNEL = 0;
+    localparam FP_N_KERNEL = 4;
+    localparam FP_S_KERNEL = 0;
 
-    localparam FP_M_IMAGE_OUT = 12;
+    localparam FP_M_IMAGE_OUT = 8;
     localparam FP_N_IMAGE_OUT = 0;
     localparam FP_S_IMAGE_OUT = 0;
 
@@ -259,12 +259,9 @@ module convolution_engine_tb;
 
         for (int y = 0; y < kernel.height; y++) begin
             for (int x = 0; x < kernel.width; x++) begin
-                kernel.image[y][x] = 3'b001;
+                kernel.image[y][x] = 4'b0001;
             end
         end
-        kernel.image[0][0] = 3'b001;
-
-        
 
         golden.kernel = kernel;
 

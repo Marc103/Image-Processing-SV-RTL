@@ -78,13 +78,13 @@ if __name__ == "__main__":
     matrixname = "general"
 
     # Example 3x3 transformation matrix (replace with your matrix)
-    matrix = ([[1, 0, 0],
-               [0, 1, 0],
+    matrix = ([[1.1068, -0.0968, -0.5022],
+               [0.0968, 1.1069, -10.1861],
                [0, 0, 1]])
 
     # Define the number of bits for the integer and fractional parts
-    num_int_bits = 5
-    num_frac_bits = 12
+    num_int_bits = 11
+    num_frac_bits = 8
 
     with open(filename+"_col_int.txt", 'w') as x_int_file, open(filename+"_col_frac.txt", 'w') as x_frac_file, \
          open(filename+"_row_int.txt", 'w') as y_int_file, open(filename+"_row_frac.txt", 'w') as y_frac_file, \

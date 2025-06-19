@@ -4,8 +4,6 @@
  * This file contains some classes for generating and working with images
  */
 
-`include "common/image_sensor_interface.svh"
-
 package camera_simulation_pkg;
     import testbench_common_pkg::*;
     import triggerable_queue_pkg::*;

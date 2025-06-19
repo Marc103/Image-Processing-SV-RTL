@@ -37,8 +37,8 @@ module bilinear_xform_tb;
     // shared localparams
     localparam real PIXCLK_PERIOD = 5;
 
-    localparam IMAGE_WIDTH = 640;
-    localparam IMAGE_HEIGHT = 480;
+    localparam IMAGE_WIDTH = 100;
+    localparam IMAGE_HEIGHT = 100;
 
     // Fixed Point Arithmetic params
     localparam FP_M_IMAGE = 8;
@@ -50,24 +50,24 @@ module bilinear_xform_tb;
 
     // How many lines in buffer ** 2
     // i.e 3 is 2^3 = 8
-    localparam N_LINES_POW2 = 8;
+    localparam N_LINES_POW2 = 5;
 
     // Turns out, the optimal condition to decide where
     // the pipe (buffer) is full and output pixels should
     // being driven is entirely dependant on the transformations
     // done for the reverse mapping. So, it too will be parameterized
     // note that you have to buffer at least 1 line and 1 column pixel
-    localparam PIPE_ROW = 1;
+    localparam PIPE_ROW = 16;
     localparam PIPE_COL = 0;
     
     localparam N_IMAGES = 2;
 
     localparam IMAGE_BIT_DEPTH = FP_M_IMAGE + FP_N_IMAGE + FP_S_IMAGE;
 
-    localparam CLKS_PER_PIXEL = 2;
+    localparam CLKS_PER_PIXEL = 1;
 
     // to work, must be >= CLKS_PER_PIXEL
-    localparam PIXEL_CADENCE = 7;
+    localparam PIXEL_CADENCE = 1;
 
     localparam INTER_IMAGE_TIME = ((IMAGE_WIDTH * IMAGE_HEIGHT) + (IMAGE_WIDTH * ((2 ** N_LINES_POW2) + 300))) * (CLKS_PER_PIXEL * PIXCLK_PERIOD * PIXEL_CADENCE);
 
@@ -126,7 +126,7 @@ module bilinear_xform_tb;
     initial begin
         image_generator.width = IMAGE_WIDTH; image_generator.height = IMAGE_HEIGHT;
         image_generator.period = INTER_IMAGE_TIME;
-        image_generator.image_name = "../test_images/princess_mononoke_640_480.ppm";
+        image_generator.image_name = "../test_images/shikamaru_100_100.ppm";
     end
 
     DigitalImageDriver #(FP_M_IMAGE, FP_N_IMAGE, FP_S_IMAGE) 
