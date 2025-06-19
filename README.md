@@ -2,9 +2,9 @@
 Features a Convolution Filter and Bilinear interpolator that are written and tested in System Verilog, using adjustable Fixed Pointed Arithmetic.
 These work on a typical data stream of pixels coming from a camera for example (stream processing). This was developed by me during my time working
 at the BiV lab headed by Professor Emma Alexander at Nothwestern University (see https://www.alexander.vision/) and used in her DfDD 
-techniques (Depth from Defocus) demo at CVPR conference 2025 (Computer Vision and Pattern Recognition). I worked with John Mamish 
-(https://www.linkedin.com/in/john-mamish-712453253/) to place the design on a low powered FPGA (the ECP%). A publication will soon be made
-and i will link here.
+techniques (Depth from Defocus) demo at CVPR conference 2025 (Computer Vision and Pattern Recognition). I worked with John Mamish on this demo 
+(https://www.linkedin.com/in/john-mamish-712453253/) and we placed the design on a low powered FPGA (the ECP5). A publication will soon be made
+and i will link it here.
 
 ## Convolution Filter
 The convolution filter allows you to apply a filter of any size and of any coefficients. In the convolution_engine_tb testbench,
